@@ -2,6 +2,20 @@
 {% extends 'main_app/base.html' %}
 
 {% block content %}
-<h2>Welcome to Oggunbemi.com!</h2>
-<p>This is the home page content.</p>
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Oggunbemi</h1>
+    <div class="video-container">
+        <iframe src="{% static 'main_app/videos/tropical_video.mp4' %}" frameborder="0" allowfullscreen></iframe>
+        <button id="playButton" class="play-button">Play</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'main_app/js/video-control.js' %}"></script>
+{% endblock %}
 {% endblock %}
