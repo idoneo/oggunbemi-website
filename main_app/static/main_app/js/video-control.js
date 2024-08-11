@@ -5,16 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     playButton.addEventListener('click', function() {
         if (video.paused) {
             video.play();
+            playButton.textContent = 'Pause';
         } else {
             video.pause();
+            playButton.textContent = 'Play';
         }
     });
 
-    video.addEventListener('play', function() {
-        playButton.innerHTML = '❚❚';  // Pause symbol
-    });
-
-    video.addEventListener('pause', function() {
-        playButton.innerHTML = '▶';  // Play symbol
+    video.addEventListener('ended', function() {
+        playButton.textContent = 'Play';
     });
 });
