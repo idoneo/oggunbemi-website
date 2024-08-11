@@ -1,11 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const iframe = document.querySelector('iframe');
+    const video = document.getElementById('tropical-video');
     const playButton = document.getElementById('playButton');
 
     playButton.addEventListener('click', function() {
-        // This assumes the video is hosted on a platform that supports postMessage API
-        // You might need to adjust this based on where your video is hosted
-        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        playButton.style.display = 'none';
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+
+    video.addEventListener('play', function() {
+        playButton.innerHTML = '❚❚';  // Pause symbol
+    });
+
+    video.addEventListener('pause', function() {
+        playButton.innerHTML = '▶';  // Play symbol
     });
 });
