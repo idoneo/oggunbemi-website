@@ -3,13 +3,15 @@
 
 {% block content %}
 <div class="landing-container">
-    <h1 class="landing-title">Welcome to Oggunbemi.com</h1>
-    <div class="video-container">
-        <video id="tropical-video">
-            <source src="{% static 'main_app/videos/tropical_video.mp4' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <button id="playButton" class="play-button">▶</button>
+    <h1 class="landing-title">Welcome to OG Gunbemi's Tropical Paradise</h1>
+    <div class="video-wrapper">
+        <div class="video-container">
+            <video id="tropical-video">
+                <source src="{% static 'main_app/videos/tropical_video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button id="playButton" class="play-button">Play</button>
     </div>
 </div>
 {% endblock %}
