@@ -10,6 +10,9 @@ support-files/
 import/
 temp/
 
+#ignore jpg
+*.jpg
+
 #ignore video files
 *.mp4
 *.mov
