@@ -1,0 +1,21 @@
+{% extends 'main_app/base.html' %}
+{% load static app_filters %}
+{% block content %}
+
+<div class="landing-container">
+    <h1 class="landing-title">Plant Academy</h1>
+    <h2 class="landing-subtitle">Afro-Cuban Lucumi Ritual Use of Plants and Herbs</h2>
+
+    <!-- Under Construction Banner -->
+    <div class="under-construction-banner">
+        <h2 class="banner-title">Under Construction</h2>
+        <p class="banner-text">We are working hard to build the Plant Academy. Stay tuned for updates!</p>
+    </div>
+
+    <!-- Optional: Additional content can be added here -->
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'main_app/js/photo-strips.js' %}"></script>
+{% endblock %}

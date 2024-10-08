@@ -1,0 +1,31 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Bienvenidos a Nuestro Academia de Las Yerbas</h1>
+    
+
+
+    <div class="video-wrapper">
+        <div class="video-container">
+            <video id="tropical-video">
+                <source src="{% static 'main_app/videos/IntroPlants2.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button id="playButton" class="play-button">comenzar el video</button>
+    </div>
+
+    <div class="landing-container-level3">
+        <div class="return-home">
+            <a href="{% url 'home_spanish' %}" class="home-button">Regresar al inicio</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'main_app/js/video-control.js' %}"></script>
+{% endblock %}

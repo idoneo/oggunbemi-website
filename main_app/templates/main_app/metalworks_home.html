@@ -1,0 +1,31 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Welcome to San Pedro Metalworks</h1>
+    <div class="video-wrapper">
+        <div class="video-container vertical-video-container">
+            <video controls>
+                <source src="{% static 'main_app/videos/sanpedro.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Buttons placed on either side of the video -->
+    <div class="button-container">
+        <!-- Back Arrow Button -->
+        <a href="{% url 'enter_home' %}" class="arrow-button left-arrow">
+            Back
+        </a>
+        <!-- Samples Arrow Button -->
+        <a href="{% url 'metalworks_samples' %}" class="arrow-button right-arrow">
+            Samples
+        </a>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'main_app/js/video-control.js' %}"></script>
+{% endblock %}

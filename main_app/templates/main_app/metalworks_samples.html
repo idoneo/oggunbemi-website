@@ -1,0 +1,188 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Metalworks Samples</h1>
+
+    <!-- Info box with pricing and ordering info -->
+    <div class="landing-container-level2">
+        <div class="info-box">
+            <h2>Pricing and Ordering Information</h2>
+            <p>
+                All prices are determined at the time of order and generally start with $75.00 minimum.
+                Prices are based on estimated shop time + materials.
+                Shipping costs ARE NOT included in the estimate and are added later.
+            </p>
+            <p>
+                For pricing inquiries or to place an order, please contact us at 
+                <a href="mailto:info@oggunbemi.com">info@oggunbemi.com</a>
+             
+
+
+            </p>
+            <p>
+                You can also follow us or DM me on Instagram:
+                <a href="https://www.instagram.com/sanpedrometal/" target="_blank">
+                    <i class="fab fa-instagram"></i> @sanpedrometal
+                </a>
+            </p>
+            
+        </div>
+         <!-- Return to Home button -->
+        <div class="return-home">
+            <a href="{% url 'home' %}" class="home-button">Return to Home</a>
+        </div>
+        
+    </div>
+
+    <div class="landing-container-level2">
+       <!-- Sample 1 -->
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal7.jpg' %}" alt="Sample 1" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>These tools are 16" long and 1/4" bar, machete, key, pickax and shovel.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/hacha-chango.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>A double headed ax for Chango.</p>
+            </div>
+        </div>
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/toolsofChango.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>The tools of Chango in iron.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/asst-1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>These are specific requests of ladder, moon, shield, bar, hook  horseshoe and prybar along with the double headed ax.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>This is the chibiriki of Oggun. I make many versions. Not always the same tools</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/chibiriki-1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Another version of the chibiriki of Oggun.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal3.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Three machetes with odu of Ifa stamped on them.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/7ochosis.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>This is a piece I made for Ochosi.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal4.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Close up of 21 tools that hang on the chibiriki.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/7tools-1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>This is good example of a medium size set of Oggun tools that are usually given when you receive warriors.</p>
+            </div>    
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/yemalla-okoto.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>A crown for Yemalla okoto in stainless steel.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal12.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>A chibriki I made for my own Oricha. Its over 6' tall. Not for sale.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/ochosi3arrows.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>I make many different styles of Ochosi.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/ochosicrown.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Ochosi crown cut out of steel with a plasma cutter and forged bows and arrows.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/thelostcrown.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Brass crown for Ochun.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/brass-ecuele.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Ecuele of Ifa in solid brass.</p>
+            </div>
+        </div>
+        <!-- Add more samples as needed -->
+    </div>
+        
+</div>
+{% endblock %}
+

@@ -1,0 +1,38 @@
+{% extends 'main_app/base.html' %}
+{% load static app_filters %}
+{% block content %}
+
+<div class="landing-container">
+    <div class="language-selection">
+        <a href="{% url 'home' %}" class="language-button active">English</a>
+        <a href="{% url 'home_spanish' %}" class="language-button">Español</a>
+    </div>
+    <img src="{% static 'main_app/images/calderoOggun.jpg' %}" alt="Caldero Image" class="semifeat-photo">
+    <h1 id="welcome-to-oggunbemi-com" class="landing-title">Welcome to Oggunbemi.com</h1>
+    <img src="{% static 'main_app/images/vive-tu-vida.jpg' %}" alt="Eye-Image" class="mini-photo">
+
+    <div class="site-choice-container">
+        <a href="{% url 'metalworks' %}" class="site-choice-button">Enter Metalworks Site</a>
+        <a href="{% url 'plants' %}" class="site-choice-button">Enter Herbal School Site</a>
+    </div>
+   
+    <!-- New div to hold both photo strips -->
+    <div class="photo-strip-container">
+        <div id="metal-strip" class="photo-strip">
+            {% for i in 14|get_range %}
+                <img src="{% static 'main_app/images/metal' %}{{ i }}.jpg" alt="Metalworks {{ i }}" class="strip-photo">
+            {% endfor %}
+        </div>
+        
+        <div id="plants-strip" class="photo-strip">
+            {% for i in 14|get_range %}
+                <img src="{% static 'main_app/images/plants' %}{{ i }}.jpg" alt="Plants {{ i }}" class="strip-photo">
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'main_app/js/photo-strips.js' %}"></script>
+{% endblock %}

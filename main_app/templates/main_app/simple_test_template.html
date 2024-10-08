@@ -1,0 +1,11 @@
+{% load static app_filters %}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Test Template</h1>
+    {% for i in 5|range %}
+        <p>Number: {{ i }}</p>
+    {% endfor %}
+</body>
+</html>

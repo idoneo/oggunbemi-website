@@ -1,0 +1,190 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Muestras de Herramientas</h1>
+
+    <!-- Info box with pricing and ordering info -->
+    <div class="landing-container-level2">
+        <div class="info-box">
+            <h2>Información sobre precios y pedidos</h2>
+            <p>
+                Todos los precios se determinan al momento de realizar el pedido 
+                y generalmente comienzan con un mínimo de $75.00 USD.
+                Los precios se basan en el tiempo estimado de fabricación + los materiales.
+                Los costos de envío NO ESTÁN incluidos en el presupuesto y se agregan más adelante.
+            </p>
+            <p>
+                Para consultas sobre precios o para realizar un pedido, contáctenos en 
+                <a href="mailto:info@oggunbemi.com">info@oggunbemi.com</a>
+            </p>
+            <p>
+                También pueden seguirnos o enviarme un DM en Instagram.:
+                <a href="https://www.instagram.com/sanpedrometal/" target="_blank">
+                    <i class="fab fa-instagram"></i> @sanpedrometal
+                </a>
+            </p>
+            
+        </div>
+         <!-- Return to Home button -->
+        <div class="return-home">
+            <a href="{% url 'home_spanish' %}" class="home-button">Regresar al inicio</a>
+        </div>
+        
+    </div>
+
+    <div class="landing-container-level2">
+       <!-- Sample 1 -->
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal7.jpg' %}" alt="Sample 1" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Estas herramientas miden 16" de largo y 1/4" hierro cuadrado; machete, llave, pico y pala.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/hacha-chango.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>El Oche de Chango.</p>
+            </div>
+        </div>
+
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/toolsofChango.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Las Herramientas de Chango en hierro.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/asst-1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Estos son pedidos específicos de escalera, luna, escudo, barra, guadaña, gancho del carnicero, herradura y palanca junto con el hacha de Chango.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Este es un chibiriki de Oggun. Hago muchas versiones. No siempre son las mismas herramientas</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/chibiriki-1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Otra version del chibriki de Oggun.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal3.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Tres machetes con odu.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/7ochosis.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Un Ochosi con siete flechas.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal4.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Las 21 herramientas de un chibiriki.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/7tools-1.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Esto es un buen ejemplo de las site herramientas de Oggun que se recibe en la ceremonia de guerrreros.
+                    Estas son de tamaño mediano</p>
+            </div>    
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/yemalla-okoto.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Una corona para Yemalla Okoto hecho de acero inoxidable.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/metal12.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p> Un chibriki de Oggun para mi proprio Santo mide más de 6'. No está a la venta.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/ochosi3arrows.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Hago la flecha de Ochosi con muchos estilos diferentes.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/ochosicrown.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Una corona para Ochosi con arco y flechas de forja y el basé cortado de acero 
+                    inoxidable con cortador de plasma.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/thelostcrown.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Una corona para Ochun en bronce.</p>
+            </div>
+        </div>
+
+        <div class="photo-description-box">
+            <div class="photo-frame">
+                <img src="{% static 'main_app/images/brass-ecuele.jpg' %}" alt="Sample 2" class="sample-photo">
+            </div>
+            <div class="text-frame">
+                <p>Ecuele de Ifa en bronce.</p>
+            </div>
+        </div>
+        <!-- Add more samples as needed -->
+    </div>
+        
+</div>
+{% endblock %}
+

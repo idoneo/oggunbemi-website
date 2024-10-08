@@ -1,0 +1,26 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Welcome to our Teaching Space on Orisha Plants</h1>
+    <div class="video-wrapper">
+        <div class="video-container">
+            <video id="tropical-video">
+                <source src="{% static 'main_app/videos/IntroPlants1.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button id="playButton" class="play-button">Play</button>
+    </div>
+    <div class="landing-container-level3">
+        <div class="return-home">
+            <a href="{% url 'home' %}" class="home-button">Return Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'main_app/js/video-control.js' %}"></script>
+{% endblock %}

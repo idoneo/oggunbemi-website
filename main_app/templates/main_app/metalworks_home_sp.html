@@ -1,0 +1,32 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Bienvenidos al Taller de San Pedro</h1>
+    <div class="video-wrapper">
+        <div class="video-container vertical-video-container">
+            <video controls>
+                <source src="{% static 'main_app/videos/sanpedro_es.mp4' %}" type="video/mp4">
+                Su navegador no acepta la etiqueta de vídeo.
+            </video>
+        </div>
+    </div>
+
+ <!-- Buttons placed on either side of the video -->
+ <div class="button-container">
+    <!-- Back Arrow Button -->
+    <a href="{% url 'home_spanish' %}" class="arrow-button left-arrow">
+        Atras
+    </a>
+    <!-- Samples Arrow Button -->
+    <a href="{% url 'metalworks_samples_es' %}" class="arrow-button right-arrow">
+        Ver Muestras
+    </a>
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="{% static 'main_app/js/video-control.js' %}"></script>
+{% endblock %}
