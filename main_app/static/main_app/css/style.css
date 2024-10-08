@@ -10,50 +10,163 @@ body {
     min-height: 100vh;
 }
 
+/* Box to hold pricing and ordering information */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    border: 2px solid #333; /* Dark border */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between this box and the content below */
+    width: 100%;
+    max-width: 800px; /* Limit the width to keep it readable */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+    color: #000; /* Text color */
+}
+
+/* Style the headings and text inside the info-box */
+.info-box h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #007BFF; /* Optional: Different color for the heading */
+}
+
+.info-box p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+
 .landing-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 21px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.landing-container-level2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: rgba(99, 232, 170, 0.5);
+}
+
+.landing-container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: rgba(121, 122, 130, 0.5);
+}
 .landing-title {
-    font-size: 2.5em;
+    font-size: 3.5em;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 30px;
     text-align: center;
 }
 
+/* Subtitle under the main title */
+.landing-subtitle {
+    font-size: 1.8em; /* Smaller font size than the main title */
+    color: #555; /* A subtler color for the subtitle */
+    margin-top: 10px; /* Space between the title and subtitle */
+    text-align: center; /* Center the subtitle like the main title */
+}
+
+
+/* New styles for site choice */
+.site-choice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.site-choice-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.site-choice-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Existing styles */
 .video-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;  /* Increased from 75% (75% * 1.2 = 90%) */
-    max-width: 900px;  /* Increased from 750px (750px * 1.2 = 900px) */
+    width: 100%; /* Ensure it's responsive */
+    max-width: 1200px; /* Cap the width of the video container */
 }
 
 .video-container {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    width: 100%; /* Make the container responsive */
+    max-width: 800px; /* You can adjust this to control the overall size */
     background-color: #000;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    margin-bottom: 20px;  /* Add space between video and button */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    padding: 0; /* Ensure no padding is applied */
+    overflow: hidden;
 }
 
 .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height based on the aspect ratio */
+    max-height: 90vh; /* Cap the height to 90% of the viewport height */
+    object-fit: fill; /* Force video to fill container, even if it stretches */
+    margin: 0; /* Ensure no margin on the video */
+    padding: 0; /* contain Maintain aspect ratio , cover stretch*/
+    background-color: #000; /* Background for better contrast */
 }
+
+.horizontal-video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* The horizontal video fills the container */
+}
+.vertical-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px; /* Set a reasonable max width for the vertical video */
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.vertical-video-container video {
+    width: auto; /* Width adjusts automatically */
+    height: 100%; /* Fill the container’s height */
+    object-fit: cover; /* Ensure it fills the container */
+}
+
 
 .play-button {
     padding: 10px 20px;
@@ -63,7 +176,24 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 20px; /* Adds space below the Play button */
 }
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
+
 
 .play-button:hover {
     background-color: rgba(255,255,255,0.9);
@@ -77,4 +207,390 @@ body {
     .landing-title {
         font-size: 2em;
     }
+
+    .site-choice-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .site-choice-button {
+        width: 100%;
+        text-align: center;
+    }
 }
+/* New styles for language selection */
+.language-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.language-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.language-button:hover,
+.language-button.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.language-button.active {
+    font-weight: bold;
+}
+
+/* Add this to your existing media query */
+@media (max-width: 768px) {
+    .language-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-button {
+        margin: 5px 0;
+    }
+}
+
+/* Container that holds both the metal and plants strips */
+.photo-strip-container {
+    display: flex;
+    justify-content: space-between; /* Space between the strips */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px; /* Add space under the buttons */
+    width: 100%;
+    gap: 20px; /* Adds space between the strips */
+}
+
+/* Individual photo strips (each will scroll horizontally) */
+.photo-strip {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll enabled */
+    white-space: nowrap; /* Prevent line breaks between images */
+    scroll-behavior: smooth; /* Smooth scrolling for better UX */
+    margin-bottom: 20px; /* Space below each strip */
+    width: 100%; /* Ensure each strip takes the full width */
+    max-height: 150px; /* Limit height to the size of the images */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
+.photo-strip::-webkit-scrollbar {
+    display: none;
+}
+
+/* Each photo in the strip */
+.strip-photo {
+    width: 200px; /* Adjust to the desired width for each image */
+    height: 150px; /* Height for each image */
+    margin-right: 10px; /* Space between each image */
+    object-fit: cover; /* Keep aspect ratio, fill the image */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Slight zoom effect on hover */
+.strip-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive styling: Stacks the strips vertically on smaller screens */
+@media (max-width: 768px) {
+    .photo-strip-container {
+        flex-direction: column; /* Stack strips vertically */
+    }
+    
+    .photo-strip {
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+}
+
+
+
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.debug-image-container {
+    border: 1px solid red;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.debug-info {
+    color: red;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.strip-photo {
+    min-height: 100px;
+    min-width: 100px;
+    border: 1px dashed blue;
+}
+
+.site-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.site-button:hover {
+    background-color: #0056b3;
+}
+
+.featured-photo {
+    display: block;              /* Makes it behave like a block to center it */
+    margin: 0 auto;              /* Centers the image horizontally */
+    max-width: 100%;             /* Makes sure it’s responsive */
+    width:35%;                  /* You can adjust this to control the size */
+    height: auto;                /* Maintains aspect ratio */
+    padding: 20px;               /* Optional: Adds space around the image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow */
+}
+
+.semifeat-photo {
+    display: block;              /* Makes it behave like a block to center it */
+    margin: 0 auto;              /* Centers the image horizontally */
+    max-width: 100%;             /* Makes sure it’s responsive */
+    width: 20%;                  /* You can adjust this to control the size */
+    height: auto;                /* Maintains aspect ratio */
+    padding: 20px;               /* Optional: Adds space around the image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow */
+}
+.mini-photo {
+    display: block;
+    margin: 0 auto;              /* Center the image horizontally */
+    width: 10%;                  /* Set the desired width (this controls the size) */
+    height: auto;                /* Maintain aspect ratio */
+    padding: 20px;               /* Optional: Adds space around the image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow */
+}
+
+
+/* Button container that aligns buttons on either side of the video */
+.button--small {
+    display: flex;
+    justify-content: space-between; /* Evenly spaces buttons on both sides */
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Adjust based on your video size */
+    margin: 20px auto;
+    padding: 0 20px; /* Optional: Add some padding around buttons */
+}
+
+/* General styling for the small arrow buttons */
+.arrow-button-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for the buttons */
+.arrow-button-small:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Left button (Back arrow) positioning */
+.left-button-small {
+    margin-right: auto; /* Push to the left */
+}
+
+/* Right button (Samples arrow) positioning */
+.right-button-small {
+    margin-left: auto; /* Push to the right */
+}
+/* Button container to align buttons on either side of the video */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between left and right arrows */
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Adjust based on your video size */
+    margin: 20px auto;
+    padding: 0 20px; /* Optional: Add some padding around buttons */
+}
+
+/* General styling for the large arrow buttons */
+.arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Left arrow styling */
+.left-arrow {
+    background-color: #047c24;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%); /* Create a left arrow shape */
+}
+
+.left-arrow:hover {
+    background-color: #0004ff;
+}
+
+/* Right arrow styling */
+.right-arrow {
+    background-color: #047c24;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%); /* Create a right arrow shape */
+}
+
+.right-arrow:hover {
+    background-color: #0004ff;
+}
+
+/* Optional: Adjust the size of the text */
+.arrow-button {
+    min-width: 150px; /* Adjust the minimum width of the buttons */
+    height: 50px;     /* Adjust the height */
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/* Ensure the arrows are responsive */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    .arrow-button {
+        width: 100%; /* Make arrows full-width on smaller screens */
+        text-align: center;
+    }
+}
+/* Container that holds each photo and description box */
+.photo-description-box {
+    display: flex;
+    align-items: center; /* Align the photo and text box vertically */
+    margin-bottom: 30px; /* Space between each photo-description pair */
+    background-color: #808080; /* Grey background for the larger container */
+    padding: 20px;
+    border: 2px solid #ccc; /* Larger frame around each photo-description pair */
+    border-radius: 8px;
+}
+
+/* Frame around the photo */
+.photo-frame {
+    flex-shrink: 0; /* Prevent the photo from shrinking */
+    margin-right: 20px; /* Space between photo and text box */
+    padding: 10px;
+    border: 2px solid #000; /* Black frame around the photo */
+    background-color: #fff; /* White background for the photo frame */
+}
+
+/* Container that holds each photo and description box */
+.photo-description-box {
+    display: flex;
+    align-items: center; /* Align the photo and text box vertically */
+    justify-content: flex-start; /* Ensure the content is left-aligned */
+    margin-bottom: 30px; /* Space between each photo-description pair */
+    background-color: #808080; /* Grey background for the larger container */
+    padding: 20px;
+    border: 2px solid #ccc; /* Larger frame around each photo-description pair */
+    border-radius: 8px;
+    max-width: 800px; /* Ensure the box doesn't take too much width */
+}
+
+/* Frame around the photo */
+.photo-frame {
+    flex-shrink: 0; /* Prevent the photo from shrinking */
+    margin-right: 20px; /* Space between photo and text box */
+    padding: 10px;
+    border: 2px solid #000; /* Black frame around the photo */
+    background-color: #fff; /* White background for the photo frame */
+}
+
+/* Style the sample photos */
+.sample-photo {
+    display: block;
+    width: 250px; /* Increase the width of the photo */
+    height: auto;
+}
+
+/* Frame around the text box */
+.text-frame {
+    flex-grow: 1; /* Allow the text box to grow and fill available space */
+    padding: 15px;
+    background-color: #000; /* Black background for the text box */
+    color: #fff; /* White text inside the box */
+    border: 2px solid #fff; /* White frame around the text box */
+    border-radius: 5px;
+    min-width: 300px; /* Ensure the text box has a minimum width */
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .photo-description-box {
+        flex-direction: column; /* Stack photo and text box vertically on smaller screens */
+        align-items: flex-start;
+    }
+    
+    .photo-frame {
+        margin-right: 0; /* Remove side margin on smaller screens */
+        margin-bottom: 15px; /* Add bottom margin instead */
+    }
+
+    .text-frame {
+        width: 100%; /* Ensure the text box takes full width on smaller screens */
+    }
+}
+
+
