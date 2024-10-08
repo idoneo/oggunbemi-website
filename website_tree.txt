@@ -1,0 +1,57 @@
+.
+├── LICENSE
+├── README.md
+├── db.sqlite3
+├── main_app
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── admin.cpython-310.pyc
+│   │   ├── apps.cpython-310.pyc
+│   │   ├── models.cpython-310.pyc
+│   │   ├── urls.cpython-310.pyc
+│   │   └── views.cpython-310.pyc
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   ├── models.py
+│   ├── static
+│   │   └── main_app
+│   ├── templates
+│   │   └── main_app
+│   ├── templatetags
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   └── app_filters.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── manage.py
+├── og_website
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── settings.cpython-310.pyc
+│   │   ├── urls.cpython-310.pyc
+│   │   └── wsgi.cpython-310.pyc
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── requirements.txt
+├── requirements_macOS.txt
+├── staticfiles
+│   ├── admin
+│   │   ├── css
+│   │   ├── img
+│   │   └── js
+│   └── main_app
+│       ├── css
+│       ├── images
+│       ├── js
+│       └── videos
+└── website_tree.txt
+
+23 directories, 32 files
